@@ -40,14 +40,18 @@
             height: 100%;
             border-radius: 50%;
             
-            /* 1. Tambahkan warna dasar BIRU (Fallback jika gambar gagal) */
-            background-color: #2c3e50; 
+            /* Warna cadangan (Biru Laut) jika gambar masih gagal loading */
+            background-color: #004563;
             
-            /* 2. Coba URL Gambar Alternatif yang lebih stabil */
-            background-image: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.freepik.com/free-photos-vectors/world-map&ved=2ahUKEwjm3oHe3reSAxUGRmwGHZz8Jh8Q0oAEegQIXRAD&usg=AOvVaw3S2vcDkKv1t7Up6RZyLM3L');
+            /* URL GAMBAR BARU (Server yang lebih stabil) */
+            background-image: url('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
             
+            /* JIKA MASIH GAGAL, COBA GANTI URL DI ATAS DENGAN INI:
+               https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg
+            */
+
             background-size: cover;
-            /* Efek Bayangan agar terlihat bulat (3D) */
+            /* Efek Bayangan 3D */
             box-shadow: inset 16px 0 40px 6px rgba(0,0,0,0.9),
                         inset -3px 0 6px 2px rgba(255,255,255,0.2); 
             animation: rotateEarth 20s linear infinite;
